@@ -1,8 +1,7 @@
 
 const inquirer = require("inquirer");
 const fs = require('fs');
-const path = require("path");
-const generate = require('./utils/generateMarkdown');
+// const generate = require('./utils/generateMarkdown');
 
 // array of questions for user
 inquirer.prompt([
@@ -54,12 +53,6 @@ inquirer.prompt([
         name: "username",
         
     },
-    {
-        type: "input",
-        message: "What is your IG",
-        name: "carenbraj",
-        
-    },
 ])
 
     .then((userResponse)=>{
@@ -71,7 +64,7 @@ inquirer.prompt([
   })
     
         function writeHTML(userObj){
-            console.log("inside of the HTML FUNC", userObj)
+            console.log("inside of the HTML", userObj)
             return `
             <!doctype html>
           <html lang="en">
@@ -93,7 +86,6 @@ inquirer.prompt([
               <h2>${userObj.contributing}</h2>
               <h2>${userObj.test}</h2>
               <h2>${userObj.username}</h2>
-              <h2>${userObj.carenbraj}</h2>
           
               <!-- Optional JavaScript -->
               <!-- jQuery first, then Popper.js, then Bootstrap JS -->
