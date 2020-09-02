@@ -48,6 +48,12 @@ inquirer.prompt([
         
     },
     {
+      type: "input",
+      message: "What is your repo link",
+      name: "repo",
+      
+  },
+    {
         type: "input",
         message: "What is your github user name?",
         name: "username",
@@ -85,6 +91,7 @@ inquirer.prompt([
               <h2>${userObj.licence}</h2>
               <h2>${userObj.contributing}</h2>
               <h2>${userObj.test}</h2>
+              <h2>${userObj.repo}</h2>
               <h2>${userObj.username}</h2>
           
               <!-- Optional JavaScript -->
